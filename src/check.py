@@ -1,7 +1,7 @@
 import os
 from playwright.sync_api import sync_playwright
 import requests
-import datetime
+from datetime import datetime
 
 BOT_TOKEN = os.environ["BABY_SWIM_BOT_TOKEN"]
 CHAT_ID = os.environ["BABY_SWIM_BOT_CHAT_ID"]
