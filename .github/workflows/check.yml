@@ -2,8 +2,7 @@ name: Check Babyschwimmen
 
 on:
   schedule:
-    - cron: "6 7,15 * * *"
-      timezone: "Europe/Berlin"
+    - cron: "9 7,13 * * *"
 
 jobs:
   check:
