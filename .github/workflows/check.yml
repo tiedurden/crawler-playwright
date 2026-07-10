@@ -2,13 +2,14 @@ name: Check Babyschwimmen
 
 on:
   schedule:
-    - cron: "9,22,25,28 13,14,15 * * *"
+    - cron: "0 7,15 * * *"
+      timezone: "Europe/Berlin"
+
+  workflow_dispatch:
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    
-  
 
     env:
       BABY_SWIM_BOT_TOKEN: ${{ secrets.BABY_SWIM_BOT_TOKEN }}
@@ -22,7 +23,5 @@ jobs:
           python-version: "3.12"
 
       - run: pip install -r requirements.txt
-
       - run: playwright install chromium
-
       - run: python src/check.py
