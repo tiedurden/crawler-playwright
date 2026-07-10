@@ -3,7 +3,8 @@ name: Check Babyschwimmen
 on:
   schedule:
     - cron: "6 7,15 * * *"
-    timezone: "Europe/Berlin"
+      timezone: "Europe/Berlin"
+
 jobs:
   check:
     runs-on: ubuntu-latest
