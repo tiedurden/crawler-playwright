@@ -2,7 +2,7 @@ name: Check Babyschwimmen
 
 on:
   schedule:
-    - cron: "28,33,38 * * * *"
+    - cron: "0 * * * *"
       timezone: "Europe/Berlin"
 
   workflow_dispatch:
