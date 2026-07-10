@@ -10,6 +10,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
 
+    env:
+      BABY_SWIM_BOT_TOKEN: ${{ secrets.BABY_SWIM_BOT_TOKEN }}
+      BABY_SWIM_BOT_CHAT_ID: ${{ secrets.BABY_SWIM_BOT_CHAT_ID }}
+
     steps:
       - uses: actions/checkout@v5
 
@@ -22,6 +26,3 @@ jobs:
       - run: playwright install chromium
 
       - run: python src/check.py
-        env:
-          BABY_SWIM_BOT_TOKEN: ${{ secrets.BABY_SWIM_BOT_TOKEN }}
-          BABY_SWIM_BOT_CHAT_ID: ${{ secrets.BABY_SWIM_BOT_CHAT_ID }}
