@@ -2,11 +2,13 @@ name: Check Babyschwimmen
 
 on:
   schedule:
-    - cron: "45 12 * * *"
-    
+    - cron: "*/5 * * * *"   
+  workflow_dispatch:
 jobs:
   check:
     runs-on: ubuntu-latest
+    
+  
 
     env:
       BABY_SWIM_BOT_TOKEN: ${{ secrets.BABY_SWIM_BOT_TOKEN }}
