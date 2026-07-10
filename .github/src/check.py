@@ -1,9 +1,9 @@
+import os
 from playwright.sync_api import sync_playwright
-
 import requests
 
-BOT_TOKEN = BABY_SWIM_BOT_TOKEN
-CHAT_ID = 6246159494
+BOT_TOKEN = os.environ["BABY_SWIM_BOT_TOKEN"]
+CHAT_ID = os.environ["BABY_SWIM_BOT_CHAT_ID"]
 
 URL = "https://www.baederland-shop.de/kurse"
 
