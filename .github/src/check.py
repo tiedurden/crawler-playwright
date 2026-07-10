@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 import requests
 
 BOT_TOKEN = BABY_SWIM_BOT_TOKEN
-CHAT_ID = "6246159494"
+CHAT_ID = 6246159494
 
 URL = "https://www.baederland-shop.de/kurse"
 
