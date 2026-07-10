@@ -7,6 +7,8 @@ CHAT_ID = os.environ["BABY_SWIM_BOT_CHAT_ID"]
 
 URL = "https://www.baederland-shop.de/kurse"
 
+now = datetime.now().hour
+
 def send_telegram(message):
     response = requests.post(
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
@@ -90,11 +92,10 @@ def main():
                 "🏊 Kurs verfügbar!\n\n"
                 )
 
+        elif now in [5, 13]:
+            send_telegram("KEIN 🏊 Kurs verfügbar!\n\n")
         else:
-            send_telegram(
-                "KEIN 🏊 Kurs verfügbar!\n\n"
-                )
-            print("Keine Plätze")
+            print("Keine Plätze - keine Nachricht gesendet")
             
 
         browser.close()
