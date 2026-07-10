@@ -8,15 +8,11 @@ CHAT_ID = os.environ["BABY_SWIM_BOT_CHAT_ID"]
 URL = "https://www.baederland-shop.de/kurse"
 
 def send_telegram(message):
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-
-   
-
     response = requests.post(
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
         data={
             "chat_id": CHAT_ID,
-            "text": message + "/n " + URL
+            "text": message + "\n" + URL
         }
     )    
 
