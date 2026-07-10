@@ -2,7 +2,7 @@ name: Check Babyschwimmen
 
 on:
   schedule:
-    - cron: "9 13,14,15 * * *"
+    - cron: "9,22,25,28 13,14,15 * * *"
 
 jobs:
   check:
