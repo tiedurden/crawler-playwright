@@ -3,8 +3,8 @@ from playwright.sync_api import sync_playwright
 import requests
 from datetime import datetime
 
-BOT_TOKEN = "8621775074:AAHIVX2FlJ-UHtpi1H28kvHckKM3BoKKPYY"
-CHAT_ID = "-5599994536"
+BOT_TOKEN = os.environ["BABY_SWIM_BOT_TOKEN"]
+CHAT_ID = os.environ["BABY_SWIM_BOT_CHAT_ID"]
 
 URL = "https://www.baederland-shop.de/kurse"
 
@@ -92,10 +92,9 @@ def main():
             send_telegram(
                 "🏊 Kurs verfügbar!\n\n"
                 )
-
-        else:
+        elif now in [5, 13]:
             send_telegram("KEIN 🏊 Kurs verfügbar!\n\n")
-
+        else:
             print("Keine Plätze - keine Nachricht gesendet")
             
 
