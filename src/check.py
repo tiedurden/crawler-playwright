@@ -93,9 +93,9 @@ def main():
                 "🏊 Kurs verfügbar!\n\n"
                 )
 
-        elif now in [5, 13]:
-            send_telegram("KEIN 🏊 Kurs verfügbar!\n\n")
         else:
+            send_telegram("KEIN 🏊 Kurs verfügbar!\n\n")
+
             print("Keine Plätze - keine Nachricht gesendet")
             
 
